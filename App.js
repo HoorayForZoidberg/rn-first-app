@@ -1,47 +1,30 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import MainScreen from './components/MainScreen';
+import Header from './components/Header';
+import Colors from './constants/colors'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.headerView}>
-        <Text style={styles.headerText}>
-          Justif
-        </Text>
-      </View>
-      <View style={styles.mainBody}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <Header style={styles.header}/>
+      <MainScreen style={styles.mainScreen}/>
     </View>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: '#fff4f5',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  headerView: {
-    flexDirection: 'row',
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'blue',
-    height: 100,
-    paddingTop: 22
+  mainScreen: {
+    flex: 5
   },
-  headerText: {
-    color: 'white',
-    fontSize: 50,
-    fontFamily: 'Avenir-HeavyOblique',
-    padding: 5
-  },
-  mainBody: {
-    flex: 1,
-    width: '80%',
-    alignItems: 'center',
-    justifyContent: 'center'
+  header: {
+    flex: 1
   }
 });
